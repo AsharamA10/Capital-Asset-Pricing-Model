@@ -12,7 +12,7 @@ layout = 'wide')
 
 st.title("Capital Asset Pricing Model")
 
-#getin input from user
+#input from user
 col1, col2 = st.columns([1,1])
 with col1:
  stocks_list = st.multiselect("Choose 4 stocks ",('AAPL','TSLA','NFLX','AMZN','GOOGL','MGM','NVDA','MSFT',),['AMZN','AAPL','TSLA','GOOGL'])
