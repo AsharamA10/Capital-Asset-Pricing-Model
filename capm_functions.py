@@ -2,7 +2,7 @@ import plotly.express as px
 import numpy as np
 
 
-#function to plat interactive platly chart
+# plat interactive platly chart
 
 def interactive_plot(df):
     fig = px.line()
@@ -11,14 +11,14 @@ def interactive_plot(df):
     fig.update_layout(width = 450, margin = dict( l = 20, r = 20, t = 50,  b = 20), legend = dict(orientation = 'h', yanchor = 'bottom', y =1.02, xanchor = 'right', x =1,))
     return fig
 
-#function to normalize the prices based on the initial price
+# normalize the prices based on the initial price
 def normalize(df_2):
     df = df_2.copy()
     for i in df.columns[1:]:
          df[i] = df[i]/df[i][0]
     return df
 
-# function to calculate daily returns
+#  calculate daily returns
 
 def daily_return(df_2):
     df = df_2.copy()
@@ -28,7 +28,7 @@ def daily_return(df_2):
         df[i][0] = 0
         return df
     
-# function to calcutate beta
+#  calcutate beta
 def calcutate_beta(stocks_daily_return, stock):
     rm = stocks_daily_return['sp500'].mean()*252
 
